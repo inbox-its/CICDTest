@@ -18,11 +18,12 @@ jobs:
       - name: Print contents in current directory
         run: ls -la
 
-      - name: Upload Reports
-        uses: actions/upload-artifact@v1
-        with:
-          name: reports
-          path: app/build/reports
+# Nema testova, nema ni reports-a
+#      - name: Upload Reports
+#        uses: actions/upload-artifact@v1
+#        with:
+#          name: reports
+#          path: app/build/reports
 
   generate-apk:
     name: Generate APK
@@ -40,8 +41,8 @@ jobs:
       - name: Generate apk
         run: ./gradlew assembleDebug
 
-#      - name: Upload apk
-#        uses: actions/upload-artifact@v1
-#        with:
-#          - name: build-output
-#            path: app/build/outputs/apk/debug/app-debug.apk
+      - name: Upload apk
+        uses: actions/upload-artifact@v1
+        with:
+          name: build-output
+          path: app/build/outputs/apk/debug/app-debug.apk
