@@ -1,6 +1,6 @@
 name: CI CD Workflow
-on:
-  push
+#on:
+#  push
 
 jobs:
   build:
