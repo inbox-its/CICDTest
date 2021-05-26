@@ -40,8 +40,8 @@ jobs:
       - name: Generate apk
         run: ./gradlew assembleDebug
 
-      - name: Upload apk
-        uses: actions/upload-artifact@v1
-        with:
-          - name: build-output
-            path: app/build/outputs/apk/debug/app-debug.apk
+#      - name: Upload apk
+#        uses: actions/upload-artifact@v1
+#        with:
+#          - name: build-output
+#            path: app/build/outputs/apk/debug/app-debug.apk
