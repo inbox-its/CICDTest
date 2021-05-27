@@ -23,7 +23,7 @@ jobs:
           releaseDirectory: app/build/outputs/apk/release
           signingKeyBase64: ${{ secrets.SIGNING_KEY }}
           alias: ${{ secrets.ALIAS }}
-          keystorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
 
       - uses: actions/upload-artifact@main
