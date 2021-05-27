@@ -32,10 +32,10 @@ jobs:
           name: release.apk
           path: ${{ steps.sign_app.outputs.signedReleaseFile }}
 
-      - uses: actions/upload-artifact@main
-        with:
-          name: mapping.txt
-          path: app/build/outputs/mapping/release/mapping.txt
+#      - uses: actions/upload-artifact@main
+#        with:
+#          name: mapping.txt
+#          path: app/build/outputs/mapping/release/mapping.txt
 
   deploy-play-store:
     needs: [build]
@@ -44,9 +44,9 @@ jobs:
       - uses: actions/download-artifact@main
         with:
           name: release.apk
-      - uses: actions/download-artifact@main
-        with:
-          name: mapping.txt
+#      - uses: actions/download-artifact@main
+#        with:
+#          name: mapping.txt
 
       - name: Publish to Play Store internal test track
         uses: r0adkll/upload-google-play@v1
@@ -56,4 +56,4 @@ jobs:
           releaseFile: app-release-unsigned-signed.apk
           track: internal
           userFraction: 0.50
-          mappingFile: mapping.txt
+#          mappingFile: mapping.txt
