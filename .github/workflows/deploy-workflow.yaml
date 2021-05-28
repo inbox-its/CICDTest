@@ -1,4 +1,4 @@
-#
+# Deploy to Play Store
 name: Deploy apk
 on:
   push:
