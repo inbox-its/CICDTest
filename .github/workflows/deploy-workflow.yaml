@@ -55,5 +55,5 @@ jobs:
           packageName: com.sarsenovic.cicdtest
           releaseFile: app-release-unsigned-signed.apk
           track: internal
-          userFraction: 1.0
+          userFraction: 0.5
 #          mappingFile: mapping.txt
