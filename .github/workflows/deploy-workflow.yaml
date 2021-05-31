@@ -56,4 +56,5 @@ jobs:
           releaseFile: app-release-unsigned-signed.apk
           track: internal
           userFraction: 0.5
+          draft: false
 #          mappingFile: mapping.txt
