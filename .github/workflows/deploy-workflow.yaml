@@ -55,6 +55,7 @@ jobs:
           packageName: com.sarsenovic.cicdtest
           releaseFile: app-release-unsigned-signed.apk
           track: internal
+          inAppUpdatePriority: 2
           userFraction: 0.5
 #          draft: false
 #          mappingFile: mapping.txt
