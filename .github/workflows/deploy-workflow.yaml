@@ -32,21 +32,21 @@ jobs:
           name: release.apk
           path: ${{ steps.sign_app.outputs.signedReleaseFile }}
 
-#      - uses: actions/upload-artifact@main
-#        with:
-#          name: mapping.txt
-#          path: app/build/outputs/mapping/release/mapping.txt
+      - uses: actions/upload-artifact@main
+        with:
+          name: mapping.txt
+          path: app/build/outputs/mapping/release/mapping.txt
 
   deploy-play-store:
-    needs: [build]
+    needs: [ build ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@main
         with:
           name: release.apk
-#      - uses: actions/download-artifact@main
-#        with:
-#          name: mapping.txt
+      - uses: actions/download-artifact@main
+        with:
+          name: mapping.txt
 
       - name: Publish to Play Store internal test track
         uses: r0adkll/upload-google-play@v1
@@ -57,5 +57,5 @@ jobs:
           track: internal
           inAppUpdatePriority: 2
           userFraction: 0.5
-#          draft: false
-#          mappingFile: mapping.txt
+          #          draft: false
+          mappingFile: mapping.txt
