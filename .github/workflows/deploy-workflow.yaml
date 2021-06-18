@@ -60,3 +60,4 @@ jobs:
           userFraction: 0.5
           #          draft: false
           # mappingFile: mapping.txt
+          changesNotSentForReview: true
