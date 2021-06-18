@@ -45,9 +45,9 @@ jobs:
       - uses: actions/download-artifact@main
         with:
           name: release.apk
-      - uses: actions/download-artifact@main
-        with:
-          name: mapping.txt
+      #- uses: actions/download-artifact@main
+      #  with:
+      #    name: mapping.txt
 
       - name: Publish to Play Store internal test track
         uses: r0adkll/upload-google-play@v1
@@ -59,4 +59,4 @@ jobs:
           inAppUpdatePriority: 2
           userFraction: 0.5
           #          draft: false
-          mappingFile: mapping.txt
+          # mappingFile: mapping.txt
