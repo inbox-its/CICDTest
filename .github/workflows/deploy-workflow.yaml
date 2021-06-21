@@ -57,6 +57,5 @@ jobs:
           track: internal
           inAppUpdatePriority: 2
           userFraction: 0.5
-          # changes_not_sent_for_review: true
 #          draft: false
 #          mappingFile: mapping.txt
